@@ -1,5 +1,5 @@
 // task-1
-/*
+
 function showThreeTimes(a) {
   return [a, a, a];
 }
@@ -37,8 +37,8 @@ console.log("4.max value is:", result4);
 
 const divisibleByTen = (x) =>
   x % 10 === 0
-    ? console.log("5.yes divisible by 10")
-    : console.log("5.false.not divisible");
+    ? console.log(`q5. true,${x} divisible by 10`)
+    : console.log(`q5.false.${x} not divisible`);
 divisibleByTen(1);
 divisibleByTen(2);
 divisibleByTen(32);
@@ -51,7 +51,7 @@ divisibleByTen(900000);
 for (let i = 1; i < 126; i++) {
   const result5b = divisibleByTen(i);
 }
-console.log(result5b);
+console.log(divisibleByTen());
 
 //task -6
 
@@ -107,10 +107,14 @@ console.log(getFirstWord("Hello"));
 //task -10
 
 const wordRepeater = (string) => {
-  let result = [];
+  let result = "";
   const words = string.split(" ");
   let lengthstr = words.length;
-  result = result.push(words);
+
+  for (let i = 0; i < lengthstr; i++)
+    for (let j = 1; j <= lengthstr; j++) {
+      result += words[i] + " ";
+    }
 
   return result;
 };
@@ -145,7 +149,11 @@ console.log(firstLetters("MongoDB Express Node React"));
 //task -13
 
 const IsStringorArray = (val13) =>
-  typeof val13 === "string" ? val13.length: Array.isArray(val13) === true ? val13.length : null;
+  typeof val13 === "string"
+    ? val13.length
+    : Array.isArray(val13) === true
+    ? val13.length
+    : null;
 
 console.log(IsStringorArray("what the fruit"));
 console.log(IsStringorArray(5464653));
@@ -157,7 +165,6 @@ console.log(explode("Cat"));
 console.log(explode(41));
 console.log(explode(""));
 console.log(explode("R & D"));
-
 
 //task -15
 const foo = (val15) => (val15.includes("o") === true ? true : false);
@@ -180,4 +187,3 @@ console.log(bar("foobar", "Cat"));
 console.log(bar("potato", "Cat"));
 console.log(bar("tomato", "Cat"));
 console.log(bar("International Space Station", "Cat"));
-*/
